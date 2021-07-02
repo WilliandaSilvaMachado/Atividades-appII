@@ -1,7 +1,15 @@
 Código 1
 
+void main() {
 
-
+  print(operadorTernario(-4));
+  
+}
+    String operadorTernario(num numero){
+    return (numero > 0)
+      ? "O $numero é positivo !!!"
+      : "O $numero é negativo!!!";
+  }
 
 ---------------------------------------------------------------
 Código 2
@@ -228,3 +236,28 @@ void main() {
 
 ---------------------------------------------------------------
 Código 11
+
+void main() {
+   
+  var salario = 4900;
+  var acrescimo = 0.4;
+  var dias_ano = 360;
+  var anos_de_trabalho = 2;
+  var meses_trabalhando = 9;
+  
+  var calculo = (anos_de_trabalho * dias_ano);
+  var conta2 = (calculo >= 360);
+  var conta3 = (anos_de_trabalho < 360);
+  var calculo2 = (meses_trabalhando * dias_ano);
+  var conta4 = (calculo2 < 360);
+  
+  var total = (salario + acrescimo);
+  var junto = (salario * 1.2);
+ 
+  if(conta2){
+    print ("Você ganhou um acrescimo seu salario é de:" + " " + "$junto");
+  }else if(conta3){
+    print ("Você não ganhou acrescimo, por ter menos de 1 ano de empresa");
+  }
+  
+ }
