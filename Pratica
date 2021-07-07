@@ -12,24 +12,28 @@ void main() {
 ............................................................
 2)
  
-void main() {
-  
+ void main() {
+
   var numeros = [2,3,4,5,7,9,34,56,24,12];
+  var maior = 0;
   
-   
   print ("LISTA DOS NÚMEROS");
   print (numeros); 
   
 
   print ("");
   
-  int numeros = 0;
-  
-  for(int i = 100; i<= 100; i = numeros; i++){
-  
-  print ("O MAIOR NÚMERO É O:" + " " + i.toString());
-  
+  for (var i = 0; i < numeros.length; i++) {
+  print("numero da lista:" + " " + '${numeros[i]}');
+
+     maior = i;
+    
+    if(i >= maior){
+      
     }
+  }
+  
+  print('Maior é o:' + " " + maior.toString());
 }
       
 ..........................................................
@@ -180,5 +184,57 @@ void main() {
   
 .....................................................................................................................
 10)
+
+void main() {
+  
+  double multaA = 21;
+  double multaB = 14;
+  double multaC = 22;
+  
+  print("Pontos na carteira:" " " + "$multaA");
+  
+  var valorA = ("O valor da sua multa é de: 500,00");
+  var valorB = ("O valor da sua multa pode variar entre: 501,00 á 1,000");
+  var valorC = ("O valor da sua multa é de: 1001,00");
+
+  var multa1 = (multaA);
+  var multa2 = (multaB);
+  var multa3 = (multaC);
+  
+ if(multa1 <= 7){
+    print("$valorA");
+  }else if(multa1 <= 20){
+    print("$valorB");
+  }else if(multa1 >= 21){
+    print("$valorC");
+  }
+  
+   print("Pontos na carteira:" " " + "$multaB");
+  
+   if(multa2 <= 7){
+    print("$valorA");
+  }else if(multa2 <= 20){
+    print("$valorB");
+  }else if(multa2 > 21){
+    print("$valorC");
+  }
+  
+  print("Pontos na carteira:" " " + "$multaC");
+  
+   if(multa3 <= 7){
+    print("$valorA");
+  }else if(multa3 <= 20){
+    print("$valorB");
+  }else if(multa3 >= 21){
+    print("$valorC");
+  }
+  
+  var valor_multas1 = (500.00);
+  var valor_multas2 = (700.00);
+  var valor_multas3 = (1001.00);
+  
+  var calculo = (valor_multas1+valor_multas2+valor_multas3);
+  print ("O detran recebe hoje:" + " " + "$calculo" + " " + "reais de multas");
+}
 
 
