@@ -68,18 +68,31 @@ void main() {
 ............................................................
 5)
 
- var medias = [2.2, 3.3, 9, 10, 4.5, 8.9, 10, 4.3, 9.8, 7.6];
-  
-  print ("LISTA DAS MÉDIAS");
-  print (medias); 
-  
+ void main() {
 
-  print ("");
+  double media = 0;
+
+  var numeros = [5.72, 7.80, 6.45, 9.94, 3.32, 1.67, 9.65, 9.43, 8.10, 7.05];
   
-  for(int i = 1; i<= 10; i++){
-    print('NOTA:' + medias.toString());
-    
-    
+  
+  for (double num in numeros){
+    media += num;
+
+  }
+  
+  media = media/10;
+  
+  print ("NOTAS DOS ALUNOS");
+  print (numeros);
+  print ("");
+  print ("MÉDIA DA TURMA É DE:" + " " + '${media.toStringAsFixed(2)}');
+  print (" ");
+  
+  for (var i = 0; i < numeros.length; i++) {
+  print("Media aluno:" + " " + '${numeros[i]}');
+
+  }
+  
 }
 
 .............................................................
