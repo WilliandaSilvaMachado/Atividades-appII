@@ -1,0 +1,90 @@
+ -PRINCIPAL DART-
+ 
+ import 'package: flutter / material.dart';
+
+import 'package: flutter_appatt1 / CamposDart.dart';
+
+void main () {
+  runApp (MaterialApp (
+    home: CamposDart (),
+  ));
+}
+................................................
+     -CAMPOS DART-
+import 'dart: html';
+
+import 'package: flutter / material.dart';
+
+
+class CamposDart extends StatefulWidget {
+  const CamposDart ({Key? key}): super (key: key);
+
+  @sobrepor
+  _CamposDartState createState () => _CamposDartState ();
+}
+
+class _CamposDartState extends State <CamposDart> {
+
+  TextEditingController _textEditingController1 = TextEditingController ();
+  TextEditingController _textEditingController2 = TextEditingController ();
+
+  @sobrepor
+  Construção de widget (contexto BuildContext) {
+    return Scaffold (
+      appBar: AppBar (
+        título: Texto ("GMAIL"),
+        backgroundColor: Colors.red,
+      ),
+      corpo: coluna (
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        filhos: <Widget> [
+          Image.asset ("imagens / logo-gmail.png"),
+          Preenchimento(
+            preenchimento: EdgeInsets.all (50),
+            filho: TextField (
+              keyboardType: TextInputType.text,
+              decoração: InputDecoration (labelText: "Digite seu email"),
+              maxLength: 50,
+              obscureText: true,
+              onSubmitted: (String e) {
+                imprimir ("E-mail:" + e);
+              },
+                controlador: _textEditingController1
+            ),
+          ),
+         Preenchimento(
+         preenchimento: EdgeInsets.all (50),
+          filho: TextField (
+          keyboardType: TextInputType.text,
+          decoração: InputDecoration (labelText: "Digite sua senha"),
+          maxLength: 20,
+          obscureText: true,
+          onSubmitted: (String e) {
+          imprimir ("Senha:" + e);
+    },
+    controlador: _textEditingController2
+    ),
+    ),
+
+          // ignorar: deprecated_member_use
+          RaisedButton (
+            filho: Texto ("Clique no botão"),
+            color: Colors.red,
+            onPressed: () {
+              print ("Email:" + _textEditingController1.text);
+              print ("Senha:" + _textEditingController2.text);
+            },
+          ),
+        ],
+      ),
+    );
+
+
+
+  }
+}
+.................................................. .................................................
+                  -PUBSPEC-
+ativos:
+    - imagens / logo-gmail.png
